@@ -1,0 +1,7 @@
+﻿/*
+ Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+ For licensing, see LICENSE.md or http://ckeditor.com/license
+*/
+CKEDITOR.plugins.add("smiley",{requires:"dialog",lang:"af,ar,az,bg,bn,bs,ca,cs,cy,da,de,de-ch,el,en,en-au,en-ca,en-gb,eo,es,es-mx,et,eu,fa,fi,fo,fr,fr-ca,gl,gu,he,hi,hr,hu,id,is,it,ja,ka,km,ko,ku,lt,lv,mk,mn,ms,nb,nl,no,oc,pl,pt,pt-br,ro,ru,si,sk,sl,sq,sr,sr-latn,sv,th,tr,tt,ug,uk,vi,zh,zh-cn",icons:"smiley",hidpi:!0,init:function(a){a.config.smiley_path=a.config.smiley_path||this.path+"images/";a.addCommand("smiley",new CKEDITOR.dialogCommand("smiley",{allowedContent:"img[alt,height,!src,title,width]",
+requiredContent:"img"}));a.ui.addButton&&a.ui.addButton("Smiley",{label:a.lang.smiley.toolbar,command:"smiley",toolbar:"insert,50"});CKEDITOR.dialog.add("smiley",this.path+"dialogs/smiley.js")}});CKEDITOR.config.smiley_images="regular_smile.jpg sad_smile.jpg wink_smile.jpg teeth_smile.jpg confused_smile.jpg tongue_smile.jpg embarrassed_smile.jpg omg_smile.jpg whatchutalkingabout_smile.jpg angry_smile.jpg angel_smile.jpg shades_smile.jpg devil_smile.jpg cry_smile.jpg lightbulb.jpg thumbs_down.jpg thumbs_up.jpg heart.jpg broken_heart.jpg kiss.jpg envelope.jpg".split(" ");
+CKEDITOR.config.smiley_descriptions="smiley;sad;wink;laugh;frown;cheeky;blush;surprise;indecision;angry;angel;cool;devil;crying;enlightened;no;yes;heart;broken heart;kiss;mail".split(";");
